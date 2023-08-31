@@ -5,6 +5,7 @@ import ListProductComponents from "./listProductsComponent";
 
 const ProductsComponent = () => {
   const { name } = useParams();
+
   const products = useContext(ProductContext);
   return (
     <>
@@ -12,7 +13,7 @@ const ProductsComponent = () => {
       {name === "sandals" ? (
         <ListProductComponents
           products={products.filter(
-            (product) => product.category === "sandals"
+            (product) => product.category === "heels"
           )}
         />
       ) : name === "sneakers" ? (
