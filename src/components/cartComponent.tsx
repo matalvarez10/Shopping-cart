@@ -1,10 +1,14 @@
 import { useContext } from "react";
 import { CartContext } from "../contexts/cartContext";
+import { IProductData } from "../interfaces/productData.interface";
+interface ICartProps {
+  deleteProduct: (newValue: IProductData) => void;
+  sumProduct: (newValue: IProductData, action: number) => void;
+}
 
-const CartComponent = () => {
+const CartComponent: React.FC<ICartProps> = ({ deleteProduct, sumProduct }) => {
   const cartProducts = useContext(CartContext);
-  console.log(cartProducts);
-  //const totalCart = cartProducts.
+
   return (
     <>
       <p>This is a cart component</p>
@@ -13,7 +17,31 @@ const CartComponent = () => {
       ) : (
         <>
           {cartProducts.map((product) => (
-            <p>{product.title}</p>
+            <>
+              <p>{product.product.title}</p>
+              <button
+                onClick={() => {
+                  sumProduct(product.product, 1);
+                }}
+              >
+                +
+              </button>
+              <p>Cantidad : {product.quant}</p>
+              <button
+                onClick={() => {
+                  sumProduct(product.product, -1);
+                }}
+              >
+                -
+              </button>
+              <button
+                onClick={() => {
+                  deleteProduct(product.product);
+                }}
+              >
+                Delete
+              </button>
+            </>
           ))}
           <p>TOTAL : XD</p>
         </>
