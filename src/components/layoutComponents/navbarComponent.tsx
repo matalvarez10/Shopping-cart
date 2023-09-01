@@ -6,7 +6,7 @@ const NavBarComponent = () => {
       <Link to="/products/sneakers">Sneakers</Link>
       <Link to="/products/flats">Flats</Link>
       <Link to="/products/sandals">Sandals</Link>
-      <div>This is the shopping cart</div>
+      <Link to="/products/cart">Shopping cart</Link>
     </nav>
 
   );

@@ -1,12 +1,13 @@
 import { IProductData } from "../../interfaces/productData.interface";
 import { useOutletContext } from "react-router-dom";
+import { IOutletProps } from "../../interfaces/outletProps.interface";
 
 interface IListProductsProps {
   products: IProductData[];
 }
 
 const ListProductComponents: React.FC<IListProductsProps> = ({ products }) => {
-  const handleCartData: (newValue: IProductData) => void = useOutletContext();
+  const { handleCartData } = useOutletContext() as IOutletProps;
 
   return (
     <>

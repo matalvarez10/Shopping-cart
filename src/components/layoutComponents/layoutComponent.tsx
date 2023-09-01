@@ -1,5 +1,4 @@
 import { Outlet } from "react-router-dom";
-import CartComponent from "../cartComponent";
 import NavBarComponent from "./navbarComponent";
 import FooterComponent from "./footerComponent";
 import { CartContext } from "../../hooks/contexts/cartContext";
@@ -36,9 +35,8 @@ const LayoutComponent = () => {
 
   return (
     <CartContext.Provider value={cartData}>
-      <CartComponent deleteProduct={deleteProduct} sumProduct={sumProduct} />
       <NavBarComponent />
-      <Outlet context={handleCartData} />
+      <Outlet context={{handleCartData,deleteProduct,sumProduct}} />
       <FooterComponent />
     </CartContext.Provider>
   );
