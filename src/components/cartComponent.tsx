@@ -1,5 +1,5 @@
 import { useContext } from "react";
-import { CartContext } from "../contexts/cartContext";
+import { CartContext } from "../hooks/contexts/cartContext";
 import { IProductData } from "../interfaces/productData.interface";
 interface ICartProps {
   deleteProduct: (newValue: IProductData) => void;

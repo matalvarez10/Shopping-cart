@@ -1,6 +1,6 @@
 import { useParams } from "react-router-dom";
 import { useContext } from "react";
-import { ProductContext } from "../../contexts/productContext";
+import { ProductContext } from "../../hooks/contexts/productContext";
 import ListProductComponents from "./listProductsComponent";
 
 const ProductsComponent = () => {

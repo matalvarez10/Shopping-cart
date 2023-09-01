@@ -1,6 +1,6 @@
 import { useState, useEffect } from "react";
 import { IProductData } from "./interfaces/productData.interface";
-import { ProductContext } from "./contexts/productContext";
+import { ProductContext } from "./hooks/contexts/productContext";
 import LayoutComponent from "./components/layoutComponents/layoutComponent";
 
 function App() {
