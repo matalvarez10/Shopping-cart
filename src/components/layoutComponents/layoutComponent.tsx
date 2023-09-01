@@ -36,11 +36,11 @@ const LayoutComponent = () => {
     });
   };
   const sumProduct = (newValue: IProductData, action: number) => {
-    
     setCartData((prevArray) => {
       return prevArray.map((element) =>
-        (element.product.title === newValue.title && element.quant + 1*action >= 1)
-          ? { ...element, quant: element.quant + 1*action }
+        element.product.title === newValue.title &&
+        element.quant + 1 * action >= 1
+          ? { ...element, quant: element.quant + 1 * action }
           : element
       );
     });

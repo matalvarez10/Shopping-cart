@@ -8,6 +8,10 @@ interface ICartProps {
 
 const CartComponent: React.FC<ICartProps> = ({ deleteProduct, sumProduct }) => {
   const cartProducts = useContext(CartContext);
+  const total = cartProducts.reduce((prev ,cur) =>{
+    const priceInt = parseInt(cur.product.prevPrice.slice(1));
+    return priceInt * cur.quant + prev;
+  },0)
 
   return (
     <>
@@ -43,7 +47,7 @@ const CartComponent: React.FC<ICartProps> = ({ deleteProduct, sumProduct }) => {
               </button>
             </>
           ))}
-          <p>TOTAL : XD</p>
+          <p>TOTAL : {total}</p>
         </>
       )}
     </>
