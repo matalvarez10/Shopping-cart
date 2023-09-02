@@ -12,8 +12,7 @@ const ProductsComponent = () => {
   const {deleteProduct,sumProduct} = useOutletContext() as IOutletProps
   const products = useContext(ProductContext);
   return (
-    <>
-      <p>This is the products Component</p>
+    <section className="my-28 mx-auto ">
       {name === "sandals" ? (
         <ListProductComponents
           products={products.filter(
@@ -35,7 +34,7 @@ const ProductsComponent = () => {
         <CartComponent deleteProduct={deleteProduct} sumProduct={sumProduct} />
         )
        : null}
-    </>
+    </section>
   );
 };
 

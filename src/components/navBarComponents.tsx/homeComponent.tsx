@@ -1,6 +1,9 @@
+import HeroComponent from "../homeComponents/heroComponent";
 const HomeComponent = () => {
     return (  
-        <p>This is the Home Component</p>
+        <section className="my-20">
+            <HeroComponent/>
+        </section>
     );
 }
  

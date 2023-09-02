@@ -35,9 +35,11 @@ const LayoutComponent = () => {
 
   return (
     <CartContext.Provider value={cartData}>
-      <NavBarComponent />
-      <Outlet context={{handleCartData,deleteProduct,sumProduct}} />
-      <FooterComponent />
+      <main className="bg-[#f2f2f2]">
+        <NavBarComponent />
+        <Outlet context={{handleCartData,deleteProduct,sumProduct}} />
+        <FooterComponent />
+      </main>
     </CartContext.Provider>
   );
 };

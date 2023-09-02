@@ -6,8 +6,8 @@ module.exports = {
   theme: {
     extend: {
       fontFamily: {
-        /* raleway: ['Raleway', 'sans'],
-        lato: ['Lato','sans'], */
+        montserrat: ['Montserrat', 'sans'],
+        lato: ['Lato','sans'],
     },
     },
   },

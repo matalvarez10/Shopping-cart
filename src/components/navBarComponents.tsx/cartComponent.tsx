@@ -14,7 +14,7 @@ const CartComponent: React.FC<ICartProps> = ({ deleteProduct, sumProduct }) => {
   },0)
 
   return (
-    <>
+    <section className="my-20">
       <p>This is a cart component</p>
       {cartProducts.length === 0 ? (
         <p>No hay productos en el carro</p>
@@ -50,7 +50,7 @@ const CartComponent: React.FC<ICartProps> = ({ deleteProduct, sumProduct }) => {
           <p>TOTAL : {total}</p>
         </>
       )}
-    </>
+    </section>
   );
 };
 
