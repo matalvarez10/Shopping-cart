@@ -3,3 +3,10 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+@layer components {
+    .section-header {
+      @apply first-letter:uppercase text-left font-montserrat text-gray-950 text-3xl font-semibold;
+    }
+
+  }

@@ -1,6 +1,9 @@
 import { useContext } from "react";
 import { CartContext } from "../../hooks/contexts/cartContext";
 import { IProductData } from "../../interfaces/productData.interface";
+import CartCardComponent from "./cartCardComponent";
+
+
 interface ICartProps {
   deleteProduct: (newValue: IProductData) => void;
   sumProduct: (newValue: IProductData, action: number) => void;
@@ -8,47 +11,34 @@ interface ICartProps {
 
 const CartComponent: React.FC<ICartProps> = ({ deleteProduct, sumProduct }) => {
   const cartProducts = useContext(CartContext);
-  const total = cartProducts.reduce((prev ,cur) =>{
+  const total = cartProducts.reduce((prev, cur) => {
     const priceInt = parseInt(cur.product.prevPrice.slice(1));
     return priceInt * cur.quant + prev;
-  },0)
+  }, 0);
 
   return (
-    <section className="my-20">
-      <p>This is a cart component</p>
+    <section className="px-9">
+      <p className="section-header">Your Shopping Cart</p>
       {cartProducts.length === 0 ? (
         <p>No hay productos en el carro</p>
       ) : (
-        <>
-          {cartProducts.map((product) => (
-            <>
-              <p>{product.product.title}</p>
-              <button
-                onClick={() => {
-                  sumProduct(product.product, 1);
-                }}
-              >
-                +
-              </button>
-              <p>Cantidad : {product.quant}</p>
-              <button
-                onClick={() => {
-                  sumProduct(product.product, -1);
-                }}
-              >
-                -
-              </button>
-              <button
-                onClick={() => {
-                  deleteProduct(product.product);
-                }}
-              >
-                Delete
-              </button>
-            </>
-          ))}
+        <div className="w-1/2">
+
+          <div className="grid grid-cols-4 justify-items-center font-lato py-2 gap-y-2">
+          <p>Product Details</p>
+          <p>Total Price</p>
+          <p>Quantity</p>
+          <p>Delete</p>
+            {cartProducts.map((cartProduct) => (
+              <CartCardComponent
+              deleteProduct={deleteProduct}
+              sumProduct={sumProduct}
+              cartProduct={cartProduct}
+              />
+            ))}
+          </div>
           <p>TOTAL : {total}</p>
-        </>
+        </div>
       )}
     </section>
   );

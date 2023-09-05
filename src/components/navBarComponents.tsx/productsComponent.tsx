@@ -12,22 +12,27 @@ const ProductsComponent = () => {
   const {deleteProduct,sumProduct} = useOutletContext() as IOutletProps
   const products = useContext(ProductContext);
   return (
-    <section className="my-28 mx-auto ">
+    <section className="py-28 mx-auto ">
       {name === "sandals" ? (
         <ListProductComponents
           products={products.filter(
             (product) => product.category === "heels"
           )}
+          name={name}
+
+          
         />
       ) : name === "sneakers" ? (
         <ListProductComponents
           products={products.filter(
             (product) => product.category === "sneakers"
           )}
+          name={name}
         />
       ) : name === "flats" ? (
         <ListProductComponents
           products={products.filter((product) => product.category === "flats")}
+          name={name}
         />
       ) :
       name === "cart" ? (

@@ -1,6 +1,6 @@
 const HeroComponent = () => {
   return (
-    <div className="h-[720px] bg-[#071828] text-[#d3d3d3] display flex flex-row text-center justify-evenly items-center overflow-hidden">
+    <div className="h-[720px] bg-gray-900 text-[#d3d3d3] display flex flex-row text-center justify-evenly items-center overflow-hidden">
       <div className="flex flex-col w-[40%] h-full justify-center items-center gap-4">
         <p className=" font-montserrat text-5xl font-extrabold">Elevate Your Every Step with Our Premium Footwear</p>
         <p className="font-lato text-xl font-medium">Step into Style and Comfort Discover the Perfect Pair of Shoes</p>

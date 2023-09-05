@@ -1,34 +1,37 @@
 import { IProductData } from "../../interfaces/productData.interface";
-import { useOutletContext } from "react-router-dom";
-import { IOutletProps } from "../../interfaces/outletProps.interface";
+import ProductCardComponent from "./productCardComponent";
 
 interface IListProductsProps {
   products: IProductData[];
+  name: string;
 }
 
-const ListProductComponents: React.FC<IListProductsProps> = ({ products }) => {
-  const { handleCartData } = useOutletContext() as IOutletProps;
-
+const ListProductComponents: React.FC<IListProductsProps> = ({
+  products,
+  name,
+}) => {
+  const nameUppercase = name.charAt(0).toUpperCase() + name.slice(1);
+  const numberResults = products.length;
   return (
-    <section className="grid grid-cols-3 gap-10 px-48 w-[90%] mx-auto text-center text-[#071828]">
-      {products.map((product) => (
-        <div className=" h-[450px] w-[350px] shadow-lg">
-          <img src={product.img} alt="product" className="h-1/2 w-full object-fill p-1" />
-          <div className="flex flex-col h-1/2 justify-between items-center">
-            <p className="font-montserrat font-semibold uppercase tracking-wider text-xl">{product.title}</p>
-            <p className="font-lato font-regular text-lg text-gray-400 line-through">{product.prevPrice}</p>
-            <p className="font-lato font-semibold text-lg text-red-400">{product.prevPrice}</p>
-            <button
-              onClick={() => {
-                handleCartData(product);
-              }}
-              className="bg-[#071828] text-white w-full py-3"
-            >
-              Add to cart
-            </button>
-          </div>
-        </div>
-      ))}
+    <section className="w-[80%] mx-auto">
+      <div className="mx-6">
+        <p className="section-header">
+          {name}{" "}
+          <span className="text-gray-400 text-2xl font-medium">
+            ({numberResults} Results)
+          </span>
+        </p>
+        <p className="text-base">
+          Home <span className="text-xs">{" > "}</span> Products{" "}
+          <span className="text-xs">{" > "}</span>
+          <span className="font-bold">{nameUppercase}</span>{" "}
+        </p>
+      </div>
+      <article className="my-4 grid grid-cols-4 gap-11 text-center text-gray-900 justify-items-center">
+        {products.map((product) => (
+          <ProductCardComponent product={product} />
+        ))}
+      </article>
     </section>
   );
 };
