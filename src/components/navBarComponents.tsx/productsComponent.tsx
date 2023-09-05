@@ -12,7 +12,7 @@ const ProductsComponent = () => {
   const {deleteProduct,sumProduct} = useOutletContext() as IOutletProps
   const products = useContext(ProductContext);
   return (
-    <section className="py-28 mx-auto ">
+    <section className="py-28 mx-auto min-h-[90vh]">
       {name === "sandals" ? (
         <ListProductComponents
           products={products.filter(

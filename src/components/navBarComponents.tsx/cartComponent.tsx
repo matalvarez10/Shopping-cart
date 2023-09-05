@@ -22,7 +22,7 @@ const CartComponent: React.FC<ICartProps> = ({ deleteProduct, sumProduct }) => {
       {cartProducts.length === 0 ? (
         <p>No hay productos en el carro</p>
       ) : (
-        <div className="w-2/3 mx-auto">
+        <div className="w-2/3 mx-auto min-h-[90vh]">
           <div className="grid grid-cols-4 justify-items-center font-lato py-2 gap-y-2">
             <p className="table-header">Product Details</p>
             <p className="table-header">Total Price</p>
