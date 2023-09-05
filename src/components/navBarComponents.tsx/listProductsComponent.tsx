@@ -28,8 +28,8 @@ const ListProductComponents: React.FC<IListProductsProps> = ({
         </p>
       </div>
       <article className="my-4 grid grid-cols-4 gap-11 text-center text-gray-900 justify-items-center">
-        {products.map((product) => (
-          <ProductCardComponent product={product} />
+        {products.map((product,index) => (
+          <ProductCardComponent product={product} key={index} main={false} />
         ))}
       </article>
     </section>

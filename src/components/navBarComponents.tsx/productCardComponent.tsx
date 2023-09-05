@@ -1,17 +1,18 @@
 import { IProductData } from "../../interfaces/productData.interface";
-import { FiStar } from "react-icons/fi";
-import { FiShoppingCart } from "react-icons/fi";
+import { FiStar,FiShoppingCart } from "react-icons/fi";
 import { useOutletContext } from "react-router-dom";
 import { IOutletProps } from "../../interfaces/outletProps.interface";
 
 interface IListProductsProps {
   product: IProductData;
+  main:boolean;
 }
 
-const ProductCardComponent: React.FC<IListProductsProps> = ({ product }) => {
+const ProductCardComponent: React.FC<IListProductsProps> = ({ product,main }) => {
     const { handleCartData } = useOutletContext() as IOutletProps;
 
-    return ( <div className=" h-[380px] w-[330px] shadow-lg rounded-md bg-white font-lato">
+    return ( <div className={" rounded-md font-lato" +
+    `${!main ? " h-[380px] w-[330px] shadow-lg bg-white" : " h-[520px] w-[330px] shadow-xl "}`}>
     <img
       src={product.img}
       alt="product"
