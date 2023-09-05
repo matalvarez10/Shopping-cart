@@ -23,12 +23,11 @@ const CartComponent: React.FC<ICartProps> = ({ deleteProduct, sumProduct }) => {
         <p>No hay productos en el carro</p>
       ) : (
         <div className="w-1/2">
-
           <div className="grid grid-cols-4 justify-items-center font-lato py-2 gap-y-2">
-          <p>Product Details</p>
-          <p>Total Price</p>
-          <p>Quantity</p>
-          <p>Delete</p>
+          <p className="table-header">Product Details</p>
+          <p className="table-header">Total Price</p>
+          <p className="table-header">Quantity</p>
+          <p className="table-header">Delete</p>
             {cartProducts.map((cartProduct) => (
               <CartCardComponent
               deleteProduct={deleteProduct}

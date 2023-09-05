@@ -8,5 +8,8 @@
     .section-header {
       @apply first-letter:uppercase text-left font-montserrat text-gray-950 text-3xl font-semibold;
     }
+    .table-header {
+      @apply text-gray-500 font-semibold text-sm;
+    }
 
   }
