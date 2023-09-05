@@ -4,7 +4,7 @@ const HeroComponent = () => {
       <div className="flex flex-col w-[40%] h-full justify-center items-center gap-4">
         <p className=" font-montserrat text-5xl font-extrabold">Elevate Your Every Step with Our Premium Footwear</p>
         <p className="font-lato text-xl font-medium">Step into Style and Comfort Discover the Perfect Pair of Shoes</p>
-        <button className="bg-[#ff3f6b] text-[#fefefe] font-lato font-bold py-3 px-10 rounded-full">SHOP NOW</button>
+        <button className="bg-[#ff3f6b] text-[#fefefe] font-lato font-bold py-3 px-10 ">SHOP NOW</button>
       </div>
 
         <div className="transform rotate-45 rounded-full bg-slate-500 h-[80%] flex justify-center items-center p-5">

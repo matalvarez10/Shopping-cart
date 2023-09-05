@@ -26,8 +26,8 @@ const priceInt = parseInt(cartProduct.product.prevPrice.slice(1))
       />
       <p className="font-bold text-base">{cartProduct.product.title}</p>
       <p className="font-normal text-xs text-gray-500">
-        Color: {cartProduct.product.color} - Brand:{" "}
-        {cartProduct.product.company}
+        Color: {cartProduct.product.color} - Unit Price:{" "}
+        {cartProduct.product.prevPrice}
       </p>
     </div>
     <p className="flex items-center font-bold text-base">$ {priceInt * cartProduct.quant}</p>
@@ -59,7 +59,7 @@ const priceInt = parseInt(cartProduct.product.prevPrice.slice(1))
     >
       <FaXmark />
     </button>
-    <div className="h-[1px] bg-gray-900 w-full opacity-30 col-span-4"></div>
+    <hr className="custom-hr"></hr>
 </>
 
 

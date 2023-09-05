@@ -9,7 +9,10 @@
       @apply first-letter:uppercase text-left font-montserrat text-gray-950 text-3xl font-semibold;
     }
     .table-header {
-      @apply text-gray-500 font-semibold text-sm;
+      @apply text-gray-500 font-semibold text-base uppercase;
+    }
+    .custom-hr{
+      @apply h-[2px] bg-gray-900 w-full opacity-30 col-span-4;
     }
 
   }
