@@ -14,5 +14,8 @@
     .custom-hr{
       @apply h-[2px] bg-gray-900 w-full opacity-30 col-span-4;
     }
+    .red-btn{
+      @apply bg-[#ff3f6b] text-indigo-50 font-lato font-bold py-3 px-10;
+    }
 
   }
