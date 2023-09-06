@@ -1,8 +1,10 @@
 import { useContext } from "react";
 import { CartContext } from "../../hooks/contexts/cartContext";
+import CartEmptyComponent from "./cartEmptyComponent";
 import { IProductData } from "../../interfaces/productData.interface";
 import CartCardComponent from "./cartCardComponent";
 import { FaArrowLeft } from "react-icons/fa6";
+import { Link } from "react-router-dom";
 
 interface ICartProps {
   deleteProduct: (newValue: IProductData) => void;
@@ -17,12 +19,12 @@ const CartComponent: React.FC<ICartProps> = ({ deleteProduct, sumProduct }) => {
   }, 0);
 
   return (
-    <section className="px-9">
+    <div className="px-9">
       <p className="section-header text-center my-3">Your Shopping Cart</p>
       {cartProducts.length === 0 ? (
-        <p>No hay productos en el carro</p>
+        <CartEmptyComponent/>
       ) : (
-        <div className="w-2/3 mx-auto min-h-[90vh]">
+        <div className="w-2/3 mx-auto ">
           <div className="grid grid-cols-4 justify-items-center font-lato py-2 gap-y-2">
             <p className="table-header">Product Details</p>
             <p className="table-header">Total Price</p>
@@ -38,10 +40,10 @@ const CartComponent: React.FC<ICartProps> = ({ deleteProduct, sumProduct }) => {
             ))}
           </div>
           <div className="flex flex-row justify-between my-2 items-start font-bold font-montserrat">
-            <button className="flex flex-row justify-center items-center gap-3">
+            <Link to={"/products/sneakers"} className="flex flex-row justify-center items-center gap-3">
               <FaArrowLeft />
               <span>Continue Shopping</span>
-            </button>
+            </Link>
             <div>
               <p className="text-right text-2xl mb-2">TOTAL : $ {total}</p>
               <button className="bg-gray-900 text-indigo-50 py-3 px-8  float-right"
@@ -52,7 +54,7 @@ const CartComponent: React.FC<ICartProps> = ({ deleteProduct, sumProduct }) => {
           </div>
         </div>
       )}
-    </section>
+    </div>
   );
 };
 

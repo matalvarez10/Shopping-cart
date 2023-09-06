@@ -1,6 +1,6 @@
 import { ProductContext } from "../../hooks/contexts/productContext";
 import { useContext } from "react";
-import ProductCardComponent from "../navBarComponents.tsx/productCardComponent";
+import ProductCardComponent from "../productsComponents/productCardComponent";
 const PopularProductsComponent = () => {
   const products = useContext(ProductContext);
   const filteredProducts = products

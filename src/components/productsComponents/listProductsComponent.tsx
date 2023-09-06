@@ -1,3 +1,4 @@
+import { Link } from "react-router-dom";
 import { IProductData } from "../../interfaces/productData.interface";
 import ProductCardComponent from "./productCardComponent";
 
@@ -21,14 +22,17 @@ const ListProductComponents: React.FC<IListProductsProps> = ({
             ({numberResults} Results)
           </span>
         </p>
-        <p className="text-base">
-          Home <span className="text-xs">{" > "}</span> Products{" "}
+        <div className="text-base">
+          <Link to={"/"}>Home</Link>
+          <span className="text-xs">{" > "}</span> Products{" "}
           <span className="text-xs">{" > "}</span>
-          <span className="font-bold">{nameUppercase}</span>{" "}
-        </p>
+          <Link to={`/products/${name}`} className="font-bold">
+            {nameUppercase}
+          </Link>{" "}
+        </div>
       </div>
       <article className="my-4 grid grid-cols-4 gap-11 text-center text-gray-900 justify-items-center">
-        {products.map((product,index) => (
+        {products.map((product, index) => (
           <ProductCardComponent product={product} key={index} main={false} />
         ))}
       </article>

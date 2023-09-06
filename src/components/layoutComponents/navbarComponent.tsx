@@ -11,10 +11,10 @@ const NavBarComponent = () => {
         />
       </Link>
       <div className="flex flex-row gap-10  ">
-        <Link to="/products/sneakers">Products</Link>
+        <Link to="/">Home</Link>
         <Link to="/products/sneakers">Sneakers</Link>
         <Link to="/products/flats">Flats</Link>
-        <Link to="/products/sandals">Sandals</Link>
+        <Link to="/products/heels">Heels</Link>
       </div>
       <Link to="/products/cart" className="text-3xl"><FaBagShopping/></Link>
     </nav>

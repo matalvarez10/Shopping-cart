@@ -18,7 +18,7 @@
       @apply bg-[#ff3f6b] text-indigo-50 font-lato font-bold px-10 py-3;
     }
     .footer-header{
-      @apply font-montserrat font-semibold text-3xl text-center mb-4;
+      @apply font-montserrat font-semibold text-3xl mb-4;
     }
     .item-list{
       @apply text-gray-400 text-lg font-light font-lato;

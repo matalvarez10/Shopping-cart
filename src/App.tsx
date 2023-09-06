@@ -1,6 +1,7 @@
 import { useState, useEffect } from "react";
 import { IProductData } from "./interfaces/productData.interface";
 import { ProductContext } from "./hooks/contexts/productContext";
+import { ScrollRestoration } from "react-router-dom";
 import LayoutComponent from "./components/layoutComponents/layoutComponent";
 
 function App() {
@@ -17,6 +18,7 @@ function App() {
   return (
     <ProductContext.Provider value={productData}>
       <LayoutComponent />
+      <ScrollRestoration/>
     </ProductContext.Provider>
   );
 }

@@ -1,7 +1,8 @@
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
 import App from "../App";
-import HomeComponent from "../components/navBarComponents.tsx/homeComponent";
-import ProductsComponent from "../components/navBarComponents.tsx/productsComponent";
+import HomeComponent from "../components/layoutComponents/homeComponent";
+import ProductsComponent from "../components/productsComponents/productsComponent";
+import ErrorComponent from "../components/layoutComponents/errorComponent";
 
 const Router = () => {
     const router = createBrowserRouter([
@@ -11,6 +12,7 @@ const Router = () => {
             children: [
                 { path: "/", element: <HomeComponent /> },
                 { path: "/products/:name", element: <ProductsComponent /> },
+                { path: "*", element: <ErrorComponent /> },
               ],
         },
     ]);
