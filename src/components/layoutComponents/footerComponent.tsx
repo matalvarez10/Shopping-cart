@@ -7,11 +7,11 @@ const FooterComponent = () => {
         <img
           src="https://grupojcs.cl/wp-content/uploads/2022/09/Partner-4.png"
           alt="logo"
-          className="h-[40%]"
+          className="h-[15%] md:h-[25%] lg:h-[40%]"
         />
-        <p className="text-lg font-light font-lato text-center">© Shoe Store 2023</p>
+        <p className="text-sm md:text-lg font-light font-lato text-center">© Shoe Store 2023</p>
       </div>
-      <div className="flex flex-row gap-10">
+      <div className="flex flex-row gap-2 md:gap-10">
         <div>
           <p className="footer-header">Shop</p>
           <ul className="item-list">
@@ -40,7 +40,7 @@ const FooterComponent = () => {
         </div>
         <div>
           <p className="footer-header text-center"> Find Us</p>
-          <div className="text-2xl flex flex-row gap-5">
+          <div className="text-2xl flex flex-col items-center md:flex-row gap-5">
             <Link to={"/"}><SiFacebook/></Link>
             <Link to={"/"}><SiInstagram/></Link>
             <Link to={"/"}><SiTwitter/></Link>

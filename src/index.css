@@ -6,7 +6,7 @@
 
 @layer components {
     .section-header {
-      @apply first-letter:uppercase text-left font-montserrat text-gray-950 text-3xl font-semibold;
+      @apply first-letter:uppercase text-left font-montserrat text-gray-950 text-2xl md:text-3xl font-semibold;
     }
     .table-header {
       @apply text-gray-500 font-semibold text-base uppercase;
@@ -15,13 +15,13 @@
       @apply h-[2px] bg-gray-900 w-full opacity-30 col-span-4;
     }
     .red-btn{
-      @apply bg-[#ff3f6b] text-indigo-50 font-lato font-bold px-10 py-3;
+      @apply bg-[#ff3f6b] text-indigo-50 font-lato font-bold px-10 py-3 max-md:w-full text-center max-md:px-6;
     }
     .footer-header{
-      @apply font-montserrat font-semibold text-3xl mb-4;
+      @apply font-montserrat font-semibold text-base md:text-3xl mb-4;
     }
     .item-list{
-      @apply text-gray-400 text-lg font-light font-lato;
+      @apply text-gray-400 text-sm md:text-lg font-light font-lato;
     }
 
   }

@@ -11,7 +11,7 @@ const PopularProductsComponent = () => {
       <p className="section-header text-center m-4">
         Trending <span className="font-light">Now</span>
       </p>
-      <div className="grid grid-cols-3 w-2/3 justify-items-center items-center mx-auto">
+      <div className="grid grid-cols-1 gap-3 w-full justify-items-center items-center mx-auto xl:grid-cols-3 xl:w[80%] m-2 2xl:w-2/3">
         {filteredProducts.map((product, index) => {
           if (index == 1) {
             return (
