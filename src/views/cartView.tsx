@@ -1,8 +1,8 @@
 import { useContext } from "react";
-import { CartContext } from "../../hooks/contexts/cartContext";
-import CartEmptyComponent from "./cartEmptyComponent";
-import { IProductData } from "../../interfaces/productData.interface";
-import CartCardComponent from "./cartCardComponent";
+import { CartContext } from "../hooks/contexts/cartContext";
+import CartEmptyComponent from "../components/cartComponents/cartEmptyComponent";
+import { IProductData } from "../interfaces/productData.interface";
+import CartCardComponent from "../components/cartComponents/cartCardComponent";
 import { FaArrowLeft } from "react-icons/fa6";
 import { Link } from "react-router-dom";
 
@@ -11,7 +11,7 @@ interface ICartProps {
   sumProduct: (newValue: IProductData, action: number) => void;
 }
 
-const CartComponent: React.FC<ICartProps> = ({ deleteProduct, sumProduct }) => {
+const CartView: React.FC<ICartProps> = ({ deleteProduct, sumProduct }) => {
   const cartProducts = useContext(CartContext);
   const total = cartProducts.reduce((prev, cur) => {
     const priceInt = parseInt(cur.product.prevPrice.slice(1));
@@ -58,4 +58,4 @@ const CartComponent: React.FC<ICartProps> = ({ deleteProduct, sumProduct }) => {
   );
 };
 
-export default CartComponent;
+export default CartView;

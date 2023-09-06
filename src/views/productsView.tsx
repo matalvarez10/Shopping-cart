@@ -1,13 +1,13 @@
 import { useParams } from "react-router-dom";
 import { useContext } from "react";
-import { ProductContext } from "../../hooks/contexts/productContext";
-import ListProductComponents from "./listProductsComponent";
-import CartComponent from "../cartComponents/cartComponent";
+import { ProductContext } from "../hooks/contexts/productContext";
+import ListProductComponents from "../components/productsComponents/listProductsComponent";
+import CartView from "./cartView";
 import { useOutletContext } from "react-router-dom";
-import { IOutletProps } from "../../interfaces/outletProps.interface";
-import ErrorComponent from "../layoutComponents/errorComponent";
+import { IOutletProps } from "../interfaces/outletProps.interface";
+import ErrorComponent from "../components/layoutComponents/errorComponent";
 
-const ProductsComponent = () => {
+const ProductsView = () => {
   const { name } = useParams();
 
   const {deleteProduct,sumProduct} = useOutletContext() as IOutletProps
@@ -37,11 +37,11 @@ const ProductsComponent = () => {
         />
       ) :
       name === "cart" ? (
-        <CartComponent deleteProduct={deleteProduct} sumProduct={sumProduct} />
+        <CartView deleteProduct={deleteProduct} sumProduct={sumProduct} />
         )
        : <ErrorComponent/> }
     </section>
   );
 };
 
-export default ProductsComponent;
+export default ProductsView;
