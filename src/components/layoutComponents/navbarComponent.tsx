@@ -10,7 +10,7 @@ const NavBarComponent = () => {
   return (
     <nav className="absolute md:fixed w-full flex flex-row gap-3 h-20 justify-between items-center top-0 text-white  px-6 lg:px-24 font-montserrat text-xs md:text-sm font-light bg-gray-900 uppercase  z-10">
       <Link to="/">
-        <img src={imageSmall} alt="smallicon" className="h-9 md:hidden" />
+        <img src={imageSmall} alt="smallicon" className="h-7 md:hidden" />
         <img
           src="https://grupojcs.cl/wp-content/uploads/2022/09/Partner-4.png"
           alt="logo"

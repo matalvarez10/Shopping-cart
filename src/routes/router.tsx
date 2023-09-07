@@ -1,6 +1,6 @@
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
 import App from "../App";
-import HomeView from "../views/homeViewt";
+import HomeView from "../views/homeView";
 import ProductsView from "../views/productsView";
 import ErrorComponent from "../components/layoutComponents/errorComponent";
 

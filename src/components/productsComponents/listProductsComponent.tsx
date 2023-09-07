@@ -18,7 +18,7 @@ const ListProductComponents: React.FC<IListProductsProps> = ({
       <div className="mx-6">
         <p className="section-header">
           {name}{" "}
-          <span className="text-gray-400 text-2xl font-medium">
+          <span className="text-gray-800 text-2xl font-light">
             ({numberResults} Results)
           </span>
         </p>
