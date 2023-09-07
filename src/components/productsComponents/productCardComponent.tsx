@@ -11,8 +11,8 @@ interface IListProductsProps {
 const ProductCardComponent: React.FC<IListProductsProps> = ({ product,main }) => {
     const { handleCartData } = useOutletContext() as IOutletProps;
 
-    return ( <div className={" rounded-md font-lato bg-white " +
-    `${!main ? " h-[380px] w-[330px] shadow-lg " : " h-[520px] w-[330px] shadow-xl "}`}>
+    return ( <div className={" rounded-md font-lato bg-white w-[280px] md:w-[330px] " +
+    `${!main ? " h-[380px] shadow-lg " : " h-[520px] shadow-xl "}`}>
     <img
       src={product.img}
       alt="product"

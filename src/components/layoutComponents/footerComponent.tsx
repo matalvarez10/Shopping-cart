@@ -2,7 +2,7 @@ import { SiFacebook, SiTwitter, SiInstagram, SiLinkedin } from "react-icons/si";
 import { Link } from "react-router-dom";
 const FooterComponent = () => {
   return (
-    <footer className=" w-full bg-gray-900 h-[250px] text-indigo-50 flex flex-row justify-around items p-5">
+    <footer className="w-full bg-gray-900 h-[250px] text-indigo-50 flex flex-row justify-around items p-5">
       <div>
         <img
           src="https://grupojcs.cl/wp-content/uploads/2022/09/Partner-4.png"

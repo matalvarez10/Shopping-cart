@@ -16,10 +16,12 @@ function App() {
   }, []);
 
   return (
-    <ProductContext.Provider value={productData}>
-      <LayoutComponent />
-      <ScrollRestoration/>
-    </ProductContext.Provider>
+    <div>
+      <ProductContext.Provider value={productData}>
+        <LayoutComponent />
+        <ScrollRestoration/>
+      </ProductContext.Provider>
+    </div>
   );
 }
 

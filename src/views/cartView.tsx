@@ -24,7 +24,7 @@ const CartView: React.FC<ICartProps> = ({ deleteProduct, sumProduct }) => {
       {cartProducts.length === 0 ? (
         <CartEmptyComponent/>
       ) : (
-        <div className="w-2/3 mx-auto ">
+        <div className="w-[100%] lg:w-2/3 mx-auto ">
           <div className="grid grid-cols-4 justify-items-center font-lato py-2 gap-y-2">
             <p className="table-header">Product Details</p>
             <p className="table-header">Total Price</p>
@@ -45,7 +45,7 @@ const CartView: React.FC<ICartProps> = ({ deleteProduct, sumProduct }) => {
               <span>Continue Shopping</span>
             </Link>
             <div>
-              <p className="text-right text-2xl mb-2">TOTAL : $ {total}</p>
+              <p className="text-right text:xl md:text-2xl mb-2">TOTAL : $ {total}</p>
               <button className="bg-gray-900 text-indigo-50 py-3 px-8  float-right"
               onClick={() => alert("Order Placed Successfully")}>
                 CHECKOUT

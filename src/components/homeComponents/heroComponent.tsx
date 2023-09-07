@@ -1,7 +1,7 @@
 import { Link } from "react-router-dom";
 const HeroComponent = () => {
   return (
-    <div className=" h-[500px] md:h-[720px] bg-gray-900 text-[#d3d3d3] display flex flex-row md:text-center justify-evenly items-center gap-2 p-6">
+    <div className=" h-[500px] md:h-[720px] bg-gray-900 text-[#d3d3d3] display flex flex-row md:text-center justify-evenly items-center gap-2 p-6 overflow-hidden ">
       <div className="flex flex-col w-[40%] h-full justify-center items-center gap-4">
         <p className=" font-montserrat text-base md:text-lg lg:text-5xl font-extrabold">
           Elevate Your Every Step with Our Premium Footwear

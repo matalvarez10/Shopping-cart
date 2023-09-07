@@ -14,6 +14,7 @@ const CartCardComponent: React.FC<ICartCardProps> = ({
   cartProduct
 }) => {
 const priceInt = parseInt(cartProduct.product.prevPrice.slice(1))
+const colorFormat = cartProduct.product.color;
   return (
 <>
     <div className="flex flex-col items-center">
@@ -24,7 +25,7 @@ const priceInt = parseInt(cartProduct.product.prevPrice.slice(1))
       />
       <p className="font-bold text-base">{cartProduct.product.title}</p>
       <p className="font-normal text-xs text-gray-500">
-        Color: {cartProduct.product.color} - Unit Price:{" "}
+        Color: {colorFormat.charAt(0).toUpperCase() + colorFormat.slice(1)} - Unit Price:{" "}
         {cartProduct.product.prevPrice}
       </p>
     </div>
