@@ -47,7 +47,7 @@ const CartView: React.FC<ICartProps> = ({ deleteProduct, sumProduct }) => {
             </Link>
             <div>
               <p className="text-right text:xl md:text-2xl mb-2">TOTAL : $ {total.toFixed(2)}</p>
-              <button className="bg-gray-900 text-indigo-50 py-3 px-8  float-right"
+              <button className="bg-gray-900 text-indigo-50 py-3 px-8  float-right hover:bg-[#ff3f6b]"
               onClick={() => alert("Order Placed Successfully")}>
                 CHECKOUT
               </button>

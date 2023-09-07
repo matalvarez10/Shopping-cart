@@ -15,7 +15,7 @@
       @apply h-[2px] bg-gray-900 w-full opacity-30 col-span-4;
     }
     .red-btn{
-      @apply bg-[#ff3f6b] text-indigo-50 font-lato font-bold px-10 py-3 max-md:w-full text-center max-md:px-6;
+      @apply bg-[#ff3f6b] text-indigo-50 font-lato font-bold px-10 py-3 max-md:w-full text-center max-md:px-6 hover:bg-[#ff3f6b];
     }
     .footer-header{
       @apply font-montserrat font-semibold text-base md:text-3xl mb-4;

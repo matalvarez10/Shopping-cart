@@ -9,7 +9,9 @@ import { IPopupData } from "../../interfaces/popupData.interface";
 import AddItemsComponent from "./addedItemsComponent";
 
 let NEW_ID = 0;
-
+if(localStorage.getItem('cartDataLocal') == null){
+  localStorage.setItem("cartDataLocal", JSON.stringify("[]"));
+}
 const initialData = JSON.parse(localStorage.getItem('cartDataLocal') || '[]');
 const LayoutComponent = () => {
   const [cartData, dispatch] = useReducer(

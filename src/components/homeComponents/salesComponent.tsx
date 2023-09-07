@@ -12,7 +12,7 @@ const SalesComponent = () => {
         <p className="text-5xl  font-bold">
           For a brief time, enjoy savings of up to 50% on all footwear!
         </p>
-        <Link to={"products/sneakers"} className="red-btn w-[300px]">
+        <Link to={"products/sneakers"} className="red-btn w-[300px] hover:bg-slate-500">
           EXPLORE COLLECTION
         </Link>
       </div>

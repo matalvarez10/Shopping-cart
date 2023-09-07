@@ -1,7 +1,7 @@
 import { Link } from "react-router-dom";
 const HeroComponent = () => {
   return (
-    <div className=" h-[500px] md:h-[720px] bg-gray-900 text-[#d3d3d3] display flex flex-row md:text-center justify-evenly items-center gap-2 p-6 overflow-hidden ">
+    <div className=" h-[500px] md:h-[720px] bg-gray-900 text-indigo-50 display flex flex-row md:text-center justify-evenly items-center gap-2 p-6 overflow-hidden ">
       <div className="flex flex-col w-[40%] h-full justify-center items-center gap-4">
         <p className=" font-montserrat text-base md:text-lg lg:text-5xl font-extrabold">
           Elevate Your Every Step with Our Premium Footwear
@@ -9,7 +9,7 @@ const HeroComponent = () => {
         <p className="font-lato text-sm md:text-lg lg:text-xl  font-medium">
           Step into Style and Comfort Discover the Perfect Pair of Shoes
         </p>
-        <Link to={"products/sneakers"} className="red-btn">
+        <Link to={"products/sneakers"} className="red-btn hover:bg-slate-500">
           SHOP NOW
         </Link>
       </div>

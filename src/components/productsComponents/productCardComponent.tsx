@@ -33,7 +33,7 @@ const ProductCardComponent: React.FC<IListProductsProps> = ({ product,main }) =>
           onClick={() => {
             handleCartData(product);
           }}
-          className="flex flex-row justify-center items-center gap-2 font-semibold text-indigo-50 bg-gray-900 rounded-md py-1"
+          className="flex flex-row justify-center items-center gap-2 font-semibold text-indigo-50 bg-gray-900 rounded-md py-1 hover:bg-[#ff3f6b]"
         >
           <FiShoppingCart />
           Add
