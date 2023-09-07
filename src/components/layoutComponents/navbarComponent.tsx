@@ -8,7 +8,7 @@ import CustomLinkComponent from "./customLinkComponent";
 const NavBarComponent = () => {
   const numberProducts = useContext(CartContext).length;
   return (
-    <nav className="absolute md:fixed w-full flex flex-row gap-3 h-20 justify-between items-center top-0 text-white  px-8 lg:px-24 font-montserrat text-xs md:text-sm font-light bg-gray-900 uppercase  z-10">
+    <nav className="absolute md:fixed w-full flex flex-row gap-3 h-20 justify-between items-center top-0 text-white  px-6 lg:px-24 font-montserrat text-xs md:text-sm font-light bg-gray-900 uppercase  z-10">
       <Link to="/">
         <img src={imageSmall} alt="smallicon" className="h-9 md:hidden" />
         <img

@@ -21,17 +21,17 @@ const colorFormat = cartProduct.product.color;
       <img
         src={cartProduct.product.img}
         alt="cart-product"
-        className="h-[120px] w-[180px] fit object-contain shadow-sm rounded-md p-5"
+        className="aspect[1/3] bg-white h-[120px] object-contain shadow-sm rounded-md p-4"
       />
-      <p className="font-bold text-base">{cartProduct.product.title}</p>
+      <p className="font-bold text-xs md:text-base">{cartProduct.product.title}</p>
       <p className="font-normal text-xs text-gray-500">
         Color: {colorFormat.charAt(0).toUpperCase() + colorFormat.slice(1)} - Unit Price:{" "}
         {cartProduct.product.newPrice}
       </p>
     </div>
-    <p className="flex items-center font-bold text-base">$ {(priceFloat * cartProduct.quant).toFixed(2)}</p>
+    <p className="flex items-center font-bold text-xs md:text-base">$ {(priceFloat * cartProduct.quant).toFixed(2)}</p>
     <div className="flex items-center">
-      <div className="flex flex-row justify-center items-center gap-4 border-2 px-2 py-1 rounded-full border-gray-900">
+      <div className="flex flex-row justify-center max-md:text-xs max-md:gap-2 items-center gap-4 border-2 px-2 py-1 rounded-full border-gray-900">
           <button
             onClick={() => {
               sumProduct(cartProduct.product, 1);
@@ -58,7 +58,7 @@ const colorFormat = cartProduct.product.color;
     >
       <FaXmark />
     </button>
-    <hr className="custom-hr"></hr>
+    <div className="custom-hr"></div>
 </>
 
 

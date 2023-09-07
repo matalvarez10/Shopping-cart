@@ -19,18 +19,18 @@ const CartView: React.FC<ICartProps> = ({ deleteProduct, sumProduct }) => {
   }, 0);
 
   return (
-    <div className="px-9">
+    <div className="px-5 md:px-9">
       <p className="section-header text-center my-3">Your Shopping Cart</p>
       {cartProducts.length === 0 ? (
         <CartEmptyComponent/>
       ) : (
         <div className="w-[100%] lg:w-2/3 mx-auto ">
-          <div className="grid grid-cols-4 justify-items-center font-lato py-2 gap-y-2">
+          <div className="grid grid-cols-4 justify-items-center font-lato py-2 gap-y-3">
             <p className="table-header">Product Details</p>
             <p className="table-header">Total Price</p>
             <p className="table-header">Quantity</p>
             <p className="table-header">Delete</p>
-            <hr className="custom-hr col-span-4" />
+            <div className="custom-hr col-span-4" />
             {cartProducts.map((cartProduct,index) => (
               <CartCardComponent
               key={index}
