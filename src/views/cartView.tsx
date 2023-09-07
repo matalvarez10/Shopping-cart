@@ -31,8 +31,9 @@ const CartView: React.FC<ICartProps> = ({ deleteProduct, sumProduct }) => {
             <p className="table-header">Quantity</p>
             <p className="table-header">Delete</p>
             <hr className="custom-hr col-span-4" />
-            {cartProducts.map((cartProduct) => (
+            {cartProducts.map((cartProduct,index) => (
               <CartCardComponent
+              key={index}
                 deleteProduct={deleteProduct}
                 sumProduct={sumProduct}
                 cartProduct={cartProduct}

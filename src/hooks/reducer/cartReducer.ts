@@ -36,6 +36,8 @@ export const  cartReducer = (cartData :ICartData[] ,action:CartAction): ICartDat
             ? { ...element, quant: element.quant + 1 * action.sign }
             : element
         );
+        
       }
     }
+    
   }

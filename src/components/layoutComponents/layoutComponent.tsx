@@ -10,15 +10,20 @@ import AddItemsComponent from "./addedItemsComponent";
 
 let NEW_ID = 0;
 
+const initialData = JSON.parse(localStorage.getItem('cartDataLocal') || '{}');
 const LayoutComponent = () => {
-  const [cartData, dispatch] = useReducer(cartReducer, []);
+  const [cartData, dispatch] = useReducer(
+    cartReducer,
+    initialData === '{}' ? [] : initialData
+  );
   const [popupAdded, setPopupAdded] = useState<IPopupData[]>([]);
-
+  localStorage.setItem("cartDataLocal", JSON.stringify(cartData));
   const handleCartData = (newValue: IProductData) => {
     dispatch({
       type: "add",
       newValue: newValue,
     });
+
     const idAux = NEW_ID;
     setPopupAdded([...popupAdded, { id: NEW_ID, title: newValue.title }]);
     NEW_ID++;
@@ -46,7 +51,7 @@ const LayoutComponent = () => {
     <CartContext.Provider value={cartData}>
       <main className="bg-indigo-50">
         <NavBarComponent />
-        <AddItemsComponent popupAdded={popupAdded}/>
+        <AddItemsComponent popupAdded={popupAdded} />
         <Outlet context={{ handleCartData, deleteProduct, sumProduct }} />
         <FooterComponent />
       </main>
