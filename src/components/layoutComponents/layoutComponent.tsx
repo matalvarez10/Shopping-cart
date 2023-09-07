@@ -10,11 +10,11 @@ import AddItemsComponent from "./addedItemsComponent";
 
 let NEW_ID = 0;
 
-const initialData = JSON.parse(localStorage.getItem('cartDataLocal') || '{}');
+const initialData = JSON.parse(localStorage.getItem('cartDataLocal') || '[]');
 const LayoutComponent = () => {
   const [cartData, dispatch] = useReducer(
     cartReducer,
-    initialData === '{}' ? [] : initialData
+    initialData === "[]" ? [] : initialData
   );
   const [popupAdded, setPopupAdded] = useState<IPopupData[]>([]);
   localStorage.setItem("cartDataLocal", JSON.stringify(cartData));

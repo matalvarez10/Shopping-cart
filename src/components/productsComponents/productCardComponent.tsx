@@ -22,12 +22,12 @@ const ProductCardComponent: React.FC<IListProductsProps> = ({ product,main }) =>
       <div className="grid grid-cols-3 content-center my-auto px-5 w-full gap-1">
         <p className="text-left font-bold uppercase tracking-wider text-base col-span-2">{product.title}</p>
         <div>
-          <p className="text-base text-red-600 font-bold">{product.prevPrice}</p>
+          <p className="text-base text-red-600 font-bold">{product.newPrice}</p>
           <p className="text-xs text-gray-600 font-bold line-through">{product.prevPrice}</p>
         </div>
         <div className="flex flex-row justify-start items-center gap-2 text-base text-gray-700 col-span-2">
           <FiStar />
-          <p className="text-xs">4.5  (351 Reviews)</p>
+          <p className="text-xs">{product.starts} ({product.numberReviews} Reviews)</p>
         </div>
         <button
           onClick={() => {

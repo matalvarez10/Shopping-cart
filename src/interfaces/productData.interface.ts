@@ -6,4 +6,6 @@ export interface IProductData  {
     company: string;
     color: string;
     category: string;
+    starts:number;
+    numberReviews:number;
 }

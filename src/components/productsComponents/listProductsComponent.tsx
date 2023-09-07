@@ -31,7 +31,7 @@ const ListProductComponents: React.FC<IListProductsProps> = ({
           </Link>{" "}
         </div>
       </div>
-      <article className="my-4 grid md:grid-cols-1 laptop:grid-cols-2 lg:grid-cols-3 3xl:grid-cols-4 gap-11 text-center text-gray-900 justify-items-center">
+      <article className="my-4 grid grid-cols-1 md:grid-cols-2 laptop:grid-cols-3 3xl:grid-cols-4 gap-11 text-center text-gray-900 justify-items-center">
         {products.map((product, index) => (
           <ProductCardComponent product={product} key={index} main={false} />
         ))}

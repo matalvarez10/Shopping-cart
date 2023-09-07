@@ -13,7 +13,7 @@ const CartCardComponent: React.FC<ICartCardProps> = ({
   sumProduct,
   cartProduct
 }) => {
-const priceInt = parseInt(cartProduct.product.prevPrice.slice(1))
+const priceFloat = parseFloat(cartProduct.product.newPrice.slice(1))
 const colorFormat = cartProduct.product.color;
   return (
 <>
@@ -26,10 +26,10 @@ const colorFormat = cartProduct.product.color;
       <p className="font-bold text-base">{cartProduct.product.title}</p>
       <p className="font-normal text-xs text-gray-500">
         Color: {colorFormat.charAt(0).toUpperCase() + colorFormat.slice(1)} - Unit Price:{" "}
-        {cartProduct.product.prevPrice}
+        {cartProduct.product.newPrice}
       </p>
     </div>
-    <p className="flex items-center font-bold text-base">$ {priceInt * cartProduct.quant}</p>
+    <p className="flex items-center font-bold text-base">$ {(priceFloat * cartProduct.quant).toFixed(2)}</p>
     <div className="flex items-center">
       <div className="flex flex-row justify-center items-center gap-4 border-2 px-2 py-1 rounded-full border-gray-900">
           <button

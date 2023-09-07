@@ -14,7 +14,7 @@ interface ICartProps {
 const CartView: React.FC<ICartProps> = ({ deleteProduct, sumProduct }) => {
   const cartProducts = useContext(CartContext);
   const total = cartProducts.reduce((prev, cur) => {
-    const priceInt = parseInt(cur.product.prevPrice.slice(1));
+    const priceInt = parseFloat(cur.product.newPrice.slice(1));
     return priceInt * cur.quant + prev;
   }, 0);
 
@@ -46,7 +46,7 @@ const CartView: React.FC<ICartProps> = ({ deleteProduct, sumProduct }) => {
               <span>Continue Shopping</span>
             </Link>
             <div>
-              <p className="text-right text:xl md:text-2xl mb-2">TOTAL : $ {total}</p>
+              <p className="text-right text:xl md:text-2xl mb-2">TOTAL : $ {total.toFixed(2)}</p>
               <button className="bg-gray-900 text-indigo-50 py-3 px-8  float-right"
               onClick={() => alert("Order Placed Successfully")}>
                 CHECKOUT
