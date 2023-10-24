@@ -1,11 +1,12 @@
 # Shopping Cart React
 
-![Page Preview](cart-preview.PNG)
+![Page Preview](cart-preview.png)
 
-<h1 text-align="center">
-  <a href="https://matalvarez10.github.io/Shopping-cart//">Visit the Deployed Page</a>
-</h1>
-
+<div align="center">
+   <h1>
+   <a href="https://matalvarez10.github.io/Shopping-cart//">Visit the Deployed Page</a>
+   </h1>
+</div>
 
 ## Overview
 
@@ -27,7 +28,6 @@ This project is a web-based shopping cart application developed using React with
 
 - **Checkout Process**: Users can proceed to the checkout page to review their cart contents, provide shipping information, and finalize their order.
 
-
 ## Technologies Used
 
 - **React**: A JavaScript library for building user interfaces, providing a robust foundation for the project.
@@ -37,7 +37,6 @@ This project is a web-based shopping cart application developed using React with
 - **Tailwind CSS**: A utility-first CSS framework used for styling the application, providing a clean and customizable design.
 
 - **Routing**: React Router.
-
 
 ## Getting Started
 
