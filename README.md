@@ -1,8 +1,17 @@
 # Shopping Cart React
+
+![Page Preview](cart-preview.PNG)
+
+<div align="center">
+  <a href="https://matalvarez10.github.io/Shopping-cart//">Visit the Deployed Page</a>
+</div>
+
+
 ## Overview
 
 This project is a web-based shopping cart application developed using React with TypeScript and styled with Tailwind CSS. It offers a user-friendly interface for customers to browse, select, and manage products within their shopping cart. The project is designed to provide a seamless shopping experience with a responsive and visually appealing user interface.
-Features
+
+## Features
 
 - **Product Catalog**: Users can browse through a diverse range of products, including images, descriptions, and prices.
 
@@ -27,7 +36,7 @@ Features
 
 - **Tailwind CSS**: A utility-first CSS framework used for styling the application, providing a clean and customizable design.
 
-- **Routing**: React Router or any suitable routing library can be used to handle page navigation.
+- **Routing**: React Router.
 
 
 ## Getting Started
@@ -38,8 +47,6 @@ To run the project locally, follow these steps:
 
 2. Navigate to the project directory.
 
-3. Install the required dependencies with `npm install` or `yarn install`.
+3. Install the required dependencies with `npm install`.
 
-4. Start the development server using `npm start` or `yarn start`.
-
-5. Open your web browser and access the application at `http://localhost:3000`.
+4. Start the development server using `npm run dev`.
