@@ -4,7 +4,7 @@
 
 <div align="center">
    <h1>
-   <a href="https://matalvarez10.github.io/Shopping-cart//">Visit the Deployed Page</a>
+   <a href="https://matalvarez10.github.io/Shopping-cart/">Visit the Deployed Page</a>
    </h1>
 </div>
 
