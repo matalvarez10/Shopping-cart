@@ -1,6 +1,6 @@
 # Shopping Cart React
 
-![Page Preview](cart-preview.png)
+![Page Preview](cart-preview.PNG)
 
 <div align="center">
    <h1>
