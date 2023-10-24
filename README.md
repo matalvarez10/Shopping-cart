@@ -2,9 +2,9 @@
 
 ![Page Preview](cart-preview.PNG)
 
-<div align="center">
+<h1 text-align="center">
   <a href="https://matalvarez10.github.io/Shopping-cart//">Visit the Deployed Page</a>
-</div>
+</h1>
 
 
 ## Overview
