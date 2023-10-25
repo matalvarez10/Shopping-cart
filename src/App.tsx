@@ -8,7 +8,7 @@ function App() {
   const [productData, setProductData] = useState<IProductData[]>([]);
 
   useEffect(() => {
-    fetch("../db/products.json")
+    fetch("/db/products.json")
       .then((response) => response.json())
       .then((data) => {
         setProductData(data.productsData);
